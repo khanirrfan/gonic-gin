@@ -1,0 +1,15 @@
+version: 1.0.0
+seeddata: false
+Logging:
+    stdout: false
+    level: debug
+    path: applog.log
+server:
+    port: ":8080"
+database:
+    host: "127.0.0.1"
+    port: 3306
+    username: 'root'
+    password: 'root1234'
+    name: 'sys'
+    

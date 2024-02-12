@@ -7,7 +7,7 @@ import (
 )
 
 func getRouteData(c *gin.Context) {
-	fmt.Println("safhgsdjhfgsdjfd")
+	fmt.Println("get route data")
 }
 
 func SetupRouteGetData(r *gin.Engine) {
