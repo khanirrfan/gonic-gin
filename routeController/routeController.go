@@ -7,6 +7,7 @@ import (
 )
 
 func RouteController(r *gin.Engine) {
+
 	routes.SetUpRoutes(r)
 	routes.SetupRouteGetData(r)
 }

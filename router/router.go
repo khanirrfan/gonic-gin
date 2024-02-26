@@ -29,6 +29,7 @@ func NewRouter() *gin.Engine {
 	r := gin.New()
 	fmt.Println("Hello world!")
 	r.Use(middleware.Authentication) // applied to app middleware
+	// db := &gorm.DB;
 	routecontroller.RouteController(r)
 	return r
 }

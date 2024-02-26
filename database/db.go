@@ -11,10 +11,11 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 var (
-	db          *gorm.DB
+	db          *gorm.DB // add gorm config
 	GlobalCache *bigcache.BigCache
 )
 
@@ -30,12 +31,13 @@ func OpenDBConnection() {
 	if err != nil {
 		log.Fatal("Error connecting to the database:", err)
 	}
-	defer dbConnection.Close()
 
 	// Use the database connection to initialize GORM
 	db, err = gorm.Open(mysql.New(mysql.Config{
 		Conn: dbConnection,
-	}), &gorm.Config{})
+	}), &gorm.Config{
+		Logger: logger.Default.LogMode(logger.Info),
+	})
 	if err != nil {
 		log.Fatal("Error initializing GORM:", err)
 	}
@@ -43,4 +45,8 @@ func OpenDBConnection() {
 	if err != nil {
 		log.Fatal("error connecting database", err.Error())
 	}
+}
+
+func GetDb() *gorm.DB {
+	return db
 }
