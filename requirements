@@ -1,0 +1,19 @@
+1 - Consumer Side - 
+    1 - Authentication jwt tokens
+    2 - create user : signup, login, forgot, change password.
+    4 - take to profile page - show the profile strength and suggest adding
+        1 - add currentcompany, can skip
+        2 - add experience
+        3 - add skills
+        4 - create resume from experience
+    5 - get feeds for feeds page based on skill and company
+    6 - like, comment, unlike, 
+    7 - add post with image, text and with mentions
+    8 - posting
+        1 - review posting (extends pt 7)
+2 - Producer Side (extends Consumer Side)- 
+    1 - posting
+        1 - job posting, feedback posting
+        2 - 
+3 - Advertising
+    1 - 
