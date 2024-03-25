@@ -10,4 +10,5 @@ func RouteController(r *gin.Engine) {
 
 	routes.SetUpRoutes(r)
 	routes.SetupRouteGetData(r)
+	routes.AuthRoutes(r)
 }

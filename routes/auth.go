@@ -1,17 +1,17 @@
 package routes
 
-func SignIn() {
+import (
+	connectorcontroller "docxa/main.go/connectorController"
 
-}
+	"github.com/gin-gonic/gin"
+)
 
-func Register() {
-
-}
-
-func ForgotPassword() {
-
-}
-
-func ChangePassword() {
-
+func AuthRoutes(r *gin.Engine) {
+	authRoutes := r.Group("/user")
+	{
+		authRoutes.POST("/login", connectorcontroller.SignIn)
+		authRoutes.POST("/register", connectorcontroller.Register)
+		authRoutes.POST("/forgotPassword", connectorcontroller.ForgotPassword)
+		authRoutes.POST("/changePassword", connectorcontroller.ChangePassword)
+	}
 }

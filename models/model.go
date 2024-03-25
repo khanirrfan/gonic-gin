@@ -6,7 +6,7 @@ import (
 	_ "gorm.io/gorm"
 )
 
-type User struct {
+type UserCopy struct {
 	ID        uint      `gorm:"primaryKey"`
 	Name      string    `gorm:"not null"`
 	Email     string    `gorm:"unique;not null"`
@@ -14,7 +14,7 @@ type User struct {
 	UpdatedAt time.Time `gorm:"autoUpdateTime"`
 }
 
-type Post struct {
+type PostCopy struct {
 	ID        uint      `gorm:"primaryKey"`
 	Title     string    `gorm:"not null"`
 	Content   string    `gorm:"not null"`
