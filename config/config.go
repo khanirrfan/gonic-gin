@@ -6,6 +6,14 @@ import (
 	"github.com/spf13/viper"
 )
 
+/*
+*
+Viper simplifies configuration management in Go applications
+by providing a unified and flexible way to read from multiple
+configuration sources. This helps in maintaining clean and
+maintainable code, especially in complex applications with
+multiple configuration needs
+*/
 var config *viper.Viper
 
 var AppConfig *viper.Viper

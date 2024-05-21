@@ -1,6 +1,7 @@
 package connectorcontroller
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -19,7 +20,7 @@ func SignIn(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-
+	fmt.Println("Hello there!")
 	c.JSON(http.StatusOK, cred)
 }
 
